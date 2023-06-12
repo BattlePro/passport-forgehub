@@ -1,0 +1,27 @@
+{
+  "name": "passport-forgehub",
+  "version": "0.1.1",
+  "description": "Passport strategy for authentication with Forgehub (forgehub.com)",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BattlePro/passport-forgehub.git"
+  },
+  "keywords": [
+    "passport",
+    "forgehub",
+    "auth",
+    "authentication",
+    "authn",
+    "identity"
+  ],
+  "author": "Battlepro Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BattlePro/passport-forgehub/issues"
+  },
+  "homepage": "https://github.com/BattlePro/passport-forgehub#readme",
+  "dependencies": {
+    "passport-oauth2": "^1.5.0"
+  }
+}
