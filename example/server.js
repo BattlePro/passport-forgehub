@@ -16,11 +16,9 @@ passport.deserializeUser(function(obj, done) {
 var scopes = ['identify', 'email'];
 
 passport.use(new Strategy({
-    domain: 'https://dev.forgehub.com/api',
     clientID: '1234',
     clientSecret: '2345',
     callbackURL: 'http://localhost:5000/callback',
-    authorizationURL: 'http://localhost:3031/oauth2/authorize',
     scope: scopes,
 }, function(accessToken, refreshToken, profile, done) {
     process.nextTick(function() {
