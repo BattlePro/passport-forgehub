@@ -4,6 +4,8 @@ var express  = require('express')
   , Strategy = require('../lib').Strategy
   , app      = express();
 
+var cors = require('cors');
+
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
@@ -14,15 +16,19 @@ passport.deserializeUser(function(obj, done) {
 var scopes = ['identify', 'email'];
 
 passport.use(new Strategy({
-    clientID: '',
-    clientSecret: '',
+    domain: 'https://dev.forgehub.com/api',
+    clientID: '1234',
+    clientSecret: '2345',
     callbackURL: 'http://localhost:5000/callback',
+    authorizationURL: 'http://localhost:3031/oauth2/authorize',
     scope: scopes,
 }, function(accessToken, refreshToken, profile, done) {
     process.nextTick(function() {
         return done(null, profile);
     });
 }));
+
+app.use(cors());
 
 app.use(session({
     secret: 'keyboard cat',

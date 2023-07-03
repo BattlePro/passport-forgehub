@@ -10,6 +10,7 @@
   "author": "Battlepro Team",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "passport": "^0.3.2"

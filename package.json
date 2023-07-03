@@ -1,6 +1,6 @@
 {
   "name": "passport-forgehub",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Passport strategy for authentication with Forgehub (forgehub.com)",
   "main": "lib/index.js",
   "repository": {
